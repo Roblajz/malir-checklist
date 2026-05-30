@@ -141,7 +141,6 @@ const JOBS={
     ]
   },
   "Malba + spravování":{
-    latex:true,
     "Nářadí":[
       {n:"Váleček velký + hulka + štýlko",q:1},{n:"Váleček malý + štýlko",q:"W"},
       {n:"Kýbl na barvu",q:"W"},{n:"Dřevěný zarážák na míchání",q:1},
@@ -160,6 +159,15 @@ const JOBS={
     "Osvětlení & ostatní":[
       {n:"Halogen",q:1},{n:"Štafle",q:1},{n:"Koště",q:1},{n:"Smetáček + lopatka",q:1},
       {n:"Nůžky",q:1},{n:"Kufr s nářadím",q:1},{n:"Houbičky / mřížka na broušení",q:1},
+    ],
+    "Podle potřeby (omyvatelná / latex)":[
+      {n:"Rukavice (omyvatelná / latex)",q:"W"},
+      {n:"Štětec navíc (omyvatelná / latex)",q:"W"},
+      {n:"Váleček malý + štýlko navíc (omyvatelná / latex)",q:"W"},
+      {n:"Váleček velký + štýlko navíc (omyvatelná / latex)",q:1},
+      {n:"Kýbl navíc (omyvatelná / latex)",q:1},
+      {n:"Mřížka do kýblu (omyvatelná / latex)",q:1},
+      {n:"Vanička (omyvatelná / latex)",q:1},
     ]
   },
   "Větší spravování":{
@@ -269,14 +277,44 @@ const JOBS={
       {n:"Smetáček + lopatka",q:1},{n:"Kufr s nářadím",q:1},
     ]
   },
+  "Zásoby do auta":{
+    "Malování":[
+      {n:"Váleček velký + hulka + štýlko",q:1},{n:"Váleček malý + štýlko",q:1},
+      {n:"Štětce",q:1},{n:"Kýbl prázdný čistý",q:5},
+      {n:"Dřevěný zarážák na míchání",q:1},{n:"Náplně do zalamovacího nože",q:1},
+      {n:"Tužky",q:1},
+    ],
+    "Spravování":[
+      {n:"Uniflot",q:1},{n:"Izol",q:1},
+      {n:"Špachtle velká",q:1},{n:"Špachtle malá",q:1},
+      {n:"Miska na uniflot",q:1},{n:"Akryl",q:1},
+      {n:"Pistole na akryl",q:1},{n:"Penetrace",q:1},
+      {n:"Brusný papír",q:1},{n:"Houbičky / mřížka na broušení",q:1},
+    ],
+    "Ochrana":[
+      {n:"Pásky",q:1},{n:"Sekvéčko",q:1},
+      {n:"Igelity",q:1},{n:"Hadra",q:1},
+      {n:"Pytle na odpad",q:1},{n:"Smetáček + lopatka",q:1},
+    ],
+    "Bezpečnost":[
+      {n:"Respirátor",q:1},{n:"Ochranné brýle",q:1},
+      {n:"Rukavice",q:1},
+    ],
+    "Elektro":[
+      {n:"Halogen",q:1},{n:"Prodlužovací kabel",q:1},
+      {n:"Opalovačka",q:1},
+    ],
+    "Ostatní":[
+      {n:"Nůžky",q:1},{n:"Kufr s nářadím",q:1},
+    ]
+  },
   "Airless stříkání":{
     "Stroje":[
       {n:"Airless mašina",q:1},{n:"Hadice + pistole airless",q:1},{n:"Buben (prodlužovací)",q:1},
     ],
     "Malování":[
       {n:"Váleček velký + hulka + štýlko",q:1},{n:"Váleček malý + štýlko",q:"W"},
-      {n:"Kýbl na barvu",q:"W"},{n:"Štětec na rohy",q:1},{n:"Silonka na přeředění barvy",q:1},{n:"Penetrace",q:1},
-      {n:"Penetrace",q:1},
+      {n:"Kýbl na barvu",q:"W"},{n:"Štětec",q:"S"},{n:"Silonka na přeředění barvy",q:1},{n:"Penetrace",q:1},
     ],
     "Sádrování":[
       {n:"Uniflot",q:1},{n:"Izol",q:1},{n:"Špachtle velká",q:1},{n:"Špachtle malá",q:1},
@@ -380,9 +418,9 @@ function allItems(){
   let all=[];
   Object.entries(job).forEach(([sec,items])=>{
     if(sec==='latex') return;
+    if(sec.startsWith('Podle potřeby')) return;
     all=all.concat(items.map(i=>i.n));
   });
-  if(job.latex&&latexOn) all=all.concat(LATEX_EXTRA.map(i=>i.n));
   return all;
 }
 
