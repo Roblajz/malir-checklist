@@ -129,6 +129,7 @@ const JOBS={
       {n:"Kýbl na barvu",q:"W"},{n:"Dřevěný zarážák na míchání",q:1},
       {n:"Štětec",q:"S"},{n:"Tužka",q:1},
       {n:"Akryl",q:1},{n:"Zalamovací nůž",q:1},{n:"Pistole na akryl",q:1},
+      {n:"Penetrace",q:1},
     ],
     "Ochrana":[
       {n:"Igelity na zem",q:"dle plochy"},{n:"Hadra na zakrytí",q:1},
@@ -146,6 +147,7 @@ const JOBS={
       {n:"Kýbl na barvu",q:"W"},{n:"Dřevěný zarážák na míchání",q:1},
       {n:"Štětec",q:"S"},{n:"Tužka",q:1},
       {n:"Akryl",q:1},{n:"Zalamovací nůž",q:1},{n:"Pistole na akryl",q:1},
+      {n:"Penetrace",q:1},
     ],
     "Spravování":[
       {n:"Uniflot",q:1},{n:"Izol",q:1},{n:"Špachtle velká",q:1},{n:"Špachtle malá",q:1},
@@ -166,13 +168,15 @@ const JOBS={
       {n:"Kýbl na barvu",q:"W"},{n:"Dřevěný zarážák na míchání",q:1},
       {n:"Štětec",q:"S"},{n:"Glajtak (hladítko)",q:1},{n:"Tužka",q:1},
       {n:"Akryl",q:1},{n:"Zalamovací nůž",q:1},{n:"Pistole na akryl",q:1},
+      {n:"Penetrace",q:1},
     ],
     "Spravování":[
       {n:"Uniflot",q:1},{n:"Izol",q:1},
       {n:"Špachtle velká",q:"M2"},{n:"Špachtle malá",q:"M2"},
       {n:"Vyrovnávací stěrka",q:1},
       {n:"Miska na uniflot",q:1},{n:"Opalovačka",q:1},{n:"Prodlužovací kabel",q:1},
-      {n:"Brusný papír",q:1},{n:"Respirátor",q:"W"},{n:"Ochranné brýle",q:"W"},
+      {n:"Respirátor",q:"W"},{n:"Ochranné brýle",q:"W"},
+      {n:"Pytle na odpad",q:"více"},
     ],
     "Ochrana":[
       {n:"Igelity na zem",q:"dle plochy"},{n:"Hadra na zakrytí",q:1},
@@ -189,12 +193,14 @@ const JOBS={
       {n:"Kýbl na barvu",q:"W"},{n:"Dřevěný zarážák na míchání",q:1},
       {n:"Štětec",q:"S"},{n:"Škrabka",q:"W"},{n:"Glajtak (hladítko)",q:1},
       {n:"Tužka",q:1},{n:"Akryl",q:1},{n:"Zalamovací nůž",q:1},{n:"Pistole na akryl",q:1},
+      {n:"Penetrace",q:1},
     ],
     "Spravování":[
       {n:"Uniflot",q:1},{n:"Izol",q:1},
       {n:"Špachtle velká",q:"M2"},{n:"Špachtle malá",q:"M2"},
       {n:"Vyrovnávací stěrka",q:1},
-      {n:"Miska na uniflot",q:1},{n:"Ochranné brýle",q:"W"},
+      {n:"Miska na uniflot",q:1},{n:"Opalovačka",q:1},{n:"Prodlužovací kabel",q:1},
+      {n:"Respirátor",q:"W"},{n:"Ochranné brýle",q:"W"},
     ],
     "Ochrana & odvoz":[
       {n:"Igelity na zem",q:"dle plochy"},{n:"Hadra na zakrytí",q:1},
@@ -202,7 +208,7 @@ const JOBS={
       {n:"Pytle na odpad",q:"více"},
     ],
     "Osvětlení & ostatní":[
-      {n:"Halogen",q:1},{n:"Prodlužovací kabel",q:1},{n:"Štafle",q:1},
+      {n:"Halogen",q:1},{n:"Štafle",q:1},
       {n:"Koště",q:1},{n:"Smetáček + lopatka",q:1},{n:"Nůžky",q:1},
       {n:"Kufr s nářadím",q:1},{n:"Houbičky / mřížka na broušení",q:1},
     ]
@@ -222,6 +228,7 @@ const JOBS={
     ],
     "Podle potřeby":[
       {n:"Akryl",q:1},{n:"Zalamovací nůž",q:1},{n:"Pistole na akryl",q:1},
+      {n:"Penetrace",q:1},
     ]
   },
   "Fasáda":{
@@ -244,8 +251,10 @@ const JOBS={
   "Nátěr radiátorů":{
     "Materiál & nářadí":[
       {n:"Syntetická barva",q:1},{n:"Primer / základ",q:1},{n:"Ředidlo",q:1},
-      {n:"Brusný papír",q:1},{n:"Štětce (vč. úzkého na žebra)",q:"S"},
-      {n:"Váleček malý + štýlko",q:1},
+      {n:"Brusný papír",q:1},
+      {n:"Štětce (vč. úzkého na žebra)",q:"S"},
+      {n:"Váleček s krátkým vlasem + štýlko",q:1},
+      {n:"Vanička s vložkami",q:1},
       {n:"Pistole (při špatném přístupu)",q:"dle potřeby"},{n:"Tužka",q:1},
     ],
     "Bezpečnost":[
@@ -253,6 +262,7 @@ const JOBS={
     ],
     "Ochrana":[
       {n:"Pásky",q:1},{n:"Sekvéčko",q:1},{n:"Hadra / igelit na podlahu",q:1},
+      {n:"Pytle na odpad",q:"více"},
     ],
     "Ostatní":[
       {n:"Halogen",q:1},{n:"Prodlužovací kabel",q:1},{n:"Nůžky",q:1},
@@ -265,15 +275,17 @@ const JOBS={
     ],
     "Malování":[
       {n:"Váleček velký + hulka + štýlko",q:1},{n:"Váleček malý + štýlko",q:"W"},
-      {n:"Kýbl na barvu",q:"W"},{n:"Štětec na rohy",q:1},{n:"Silonka na přeředění barvy",q:1},
+      {n:"Kýbl na barvu",q:"W"},{n:"Štětec na rohy",q:1},{n:"Silonka na přeředění barvy",q:1},{n:"Penetrace",q:1},
+      {n:"Penetrace",q:1},
     ],
     "Sádrování":[
       {n:"Uniflot",q:1},{n:"Izol",q:1},{n:"Špachtle velká",q:1},{n:"Špachtle malá",q:1},
       {n:"Miska na uniflot",q:1},{n:"Opalovačka",q:1},
     ],
     "Zakrývání":[
-      {n:"Sekvéčko (hodně!)",q:"více rolí"},{n:"Papíry na zem (přilepovací)",q:"dle plochy"},
-      {n:"Igelity na nábytek / okna",q:"dle potřeby"},{n:"Pásky",q:"více rolí"},
+      {n:"Sekvéčko (hodně!)",q:"více rolí"},
+      {n:"Papíry na zem (přilepovací)",q:"dle plochy"},
+      {n:"Pásky",q:"více rolí"},
       {n:"Zalamovací nůž",q:1},{n:"Oblek na stříkání",q:"W"},
     ],
     "Bezpečnost":[
@@ -320,7 +332,6 @@ function getQty(q){
   if(q==='S') return '×'+getStetecQty();
   if(q==='M2') return '×'+Math.min(workers,2);
   if(q==='Wx2') return '×'+(workers*2);
-  if(q==='2+') return workers>1?'×'+(workers*2):'×2';
   return q;
 }
 
